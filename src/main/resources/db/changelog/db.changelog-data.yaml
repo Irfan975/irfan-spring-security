@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: irfan
+      author: irfan
+      comment: Adds new table data
+      changes:
+        - sql:
+            tableName: user
+            dbms: mysql
+            splitStatements: true
+            sql: insert into user(id,user_name, password, active, roles) values (1,'foo', 'foo', true, 'Admin')
+            stripComments: true

@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: NGPOS-4944_1
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: User
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: userName
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: roles
+                  type: TEXT
+                  constraints:
+                    nullable: false
